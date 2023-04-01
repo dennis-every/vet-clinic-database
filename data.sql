@@ -136,3 +136,16 @@ VALUES ('William Tatcher', 45, '2000-04-23'),
 ('Jack Harkness', 38, '2008-06-08')
 COMMIT;
 SELECT * FROM vets;
+
+-- Insert the following data for specialties:
+-- Vet William Tatcher is specialized in Pokemon.
+-- Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+-- Vet Jack Harkness is specialized in Digimon.
+BEGIN;
+INSERT INTO specializations(vets_id, species_id)
+VALUES (1, 1),
+(3, 2),
+(3, 1),
+(4, 2);
+COMMIT;
+SELECT * FROM specializations;
